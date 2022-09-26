@@ -14,6 +14,7 @@ class BookSerializer
         },
         total_books_found: books_data[1],
         books: books_data[0].each do |book_info|
+          # binding.pry
           book_info
         end
       }
