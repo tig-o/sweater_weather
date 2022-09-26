@@ -41,4 +41,16 @@ RSpec.describe 'Retrieve Books API' do
     end
 
   end
+
+  it 'returns a 400 if qty or location is not found' do
+    get '/api/v1/book-search?location=&quantity=5'
+
+    expect(response.status).to eq(400)
+  end
+
+  it 'returns a 400 if qty or location is not found' do
+    get '/api/v1/book-search?location=denver,co&quantity='
+
+    expect(response.status).to eq(400)
+  end
 end
