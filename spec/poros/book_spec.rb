@@ -8,6 +8,12 @@ RSpec.describe Book do
       publisher: ["Chilton"]
     )
 
+    expect(dune.isbn).to eq([25, 3])
+    expect(dune.isbn).to be_an(Array)
+    expect(dune.title).to eq("Dune")
+    expect(dune.title).to be_a(String)
+    expect(dune.publisher).to eq(["Chilton"])
+    expect(dune.publisher).to be_an(Array)
     expect(dune).to be_an_instance_of(Book)
   end
 end
