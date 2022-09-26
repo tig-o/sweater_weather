@@ -5,7 +5,7 @@ RSpec.describe Weather do
     coordinates = MapFacade.get_latitude_longitude("miami,fl")
     response = WeatherFacade.get_forecasts(coordinates[:lat], coordinates[:lng])
     weather = Weather.new(response)
-    binding.pry
+
     expect(weather.id).to be nil
     expect(weather.uvi).to be_a(Float)
     expect(weather.icon).to be_a(String)
