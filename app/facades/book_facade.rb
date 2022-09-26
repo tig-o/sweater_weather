@@ -2,11 +2,14 @@ class BookFacade
   def self.get_books(location, qty)
     books = BookService.get_books(location)
     book_collection = []
+
     books[:docs].first(qty.to_i).map do |book|
       book_collection << Book.new(book)
-      # Book.new(book)
     end
-    binding.pry
+    
+    book_amount = books[:numFound]
+
+    return book_collection, book_amount
   end
 end
 
