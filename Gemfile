@@ -18,8 +18,6 @@ gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'factory_bot_rails'
-  gem 'faker'
   gem 'pry'
 end
 
@@ -31,10 +29,12 @@ end
 
 group :test do
   gem 'vcr'
+  gem 'faker'
   gem 'webmock'
   gem 'simplecov'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
