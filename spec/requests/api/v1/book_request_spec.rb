@@ -21,12 +21,24 @@ RSpec.describe 'Retrieve Books API' do
     expect(weather_books[:data]).to have_key(:total_books_found)
     expect(weather_books[:data][:total_books_found]).to be_an(Integer)
 
-
     expect(weather_books[:data][:attributes]).to have_key(:forecast)
     expect(weather_books[:data][:attributes][:forecast]).to be_a(Hash)
     expect(weather_books[:data][:attributes]).to have_key(:destination)
     expect(weather_books[:data][:attributes][:destination]).to eq("denver,co")
+    
+    expect(weather_books[:data][:books].count).to eq(5)
+    book_collection = weather_books[:data][:books]
+    
+    book_collection.each do |book|
+      expect(book).to have_key(:isbn)
+      expect(book).to have_key(:title)
+      expect(book).to have_key(:publisher)
 
-    expect()
+      expect(book[:isbn]).to be_an(Array)
+      expect(book[:title]).to be_a(String)
+      expect(book[:publisher]).to be_an(Array)
+      # binding.pry
+    end
+
   end
 end
