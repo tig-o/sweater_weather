@@ -25,5 +25,14 @@ class Weather
     @visibility = data[:current][:visibility]
     @conditions = data[:current][:weather][0][:description]
     @icon = data[:current][:weather][0][:icon]
+    
+    @hourly_weather = data[:hourly].first(8).map do |hour|
+      HourlyWeather.new(hour) # sending hourly forecast objects to serialize through a weather object
+    end
+
+    @daily_weather = data[:daily].first(5).map do |day|
+      DailyWeather.new(day) # sending daily forecast objects to serialize through a weather object
+    end
+
   end
 end
