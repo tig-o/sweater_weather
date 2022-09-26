@@ -53,4 +53,10 @@ RSpec.describe 'Retrieve Books API' do
 
     expect(response.status).to eq(400)
   end
+
+  xit 'returns a 400 if quantity is negative' do
+    get '/api/v1/book-search?location=denver,co&quantity=-5'
+
+    expect(response.status).to eq(400)
+  end
 end
