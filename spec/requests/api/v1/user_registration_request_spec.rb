@@ -67,6 +67,45 @@ RSpec.describe 'User Registration API' do
     expect(response).to_not be_successful
     expect(response.status).to eq(400)
   end
+
+  it 'returns 400 error if missing an email', :vcr do
+    data = {
+            "email": "",
+            "password": "weakpw",
+            "password_confirmation": "strongpw123#$%^POWElsdfki34POIS"
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+  end
+
+  it 'returns 400 error if missing an pw', :vcr do
+    data = {
+            "email": "user1@turing.edu",
+            "password": "",
+            "password_confirmation": "strongpw123#$%^POWElsdfki34POIS"
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+  end
+
+  it 'returns 400 error if missing an pw confirmation', :vcr do
+    data = {
+            "email": "user1@turing.edu",
+            "password": "weakpw",
+            "password_confirmation": ""
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+  end
 end
 
 
