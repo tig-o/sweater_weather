@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'User Registration API' do
-  it 'creates a unique user and generates api key for user' do
+  it 'creates a unique user and generates api key for user', :vcr do
     data = {
               "email": "user1@turing.edu",
               "password": "strongpw123",
@@ -14,7 +14,7 @@ RSpec.describe 'User Registration API' do
     expect(response).to be_successful
 
     user = JSON.parse(response.body, symbolize_names: true)
-    
+
     expect(user).to have_key(:data)
     expect(user[:data]).to be_a(Hash)
     
@@ -32,7 +32,27 @@ RSpec.describe 'User Registration API' do
 
     expect(user[:data][:attributes]).to have_key(:api_key)
     expect(user[:data][:attributes][:api_key]).to be_a(String)
- 
+  end
+
+  it 'returns 400 error if email is already utilized', :vcr do
+    data = {
+            "email": "user1@turing.edu",
+            "password": "strongpw123",
+            "password_confirmation": "strongpw123"
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    data = {
+            "email": "user1@turing.edu",
+            "password": "strongpw123",
+            "password_confirmation": "strongpw123"
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
   end
 end
 
