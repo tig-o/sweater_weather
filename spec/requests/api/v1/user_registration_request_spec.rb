@@ -54,6 +54,19 @@ RSpec.describe 'User Registration API' do
     expect(response).to_not be_successful
     expect(response.status).to eq(400)
   end
+
+  it 'returns 400 error if passwords do not match', :vcr do
+    data = {
+            "email": "user1@turing.edu",
+            "password": "weakpw",
+            "password_confirmation": "strongpw123#$%^POWElsdfki34POIS"
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+  end
 end
 
 
