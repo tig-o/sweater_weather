@@ -1,0 +1,206 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<MAP_QUEST_API_KEY>&location=Pueblo,CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 28 Sep 2022 11:52:46 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1733'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 28 Sep 2022 11:52:46 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=BD31E25D549EAA2EC7520E326BCFA3F6; Path=/; HttpOnly
+      X-Vz-Migration-Api:
+      - 'false'
+      Status:
+      - success
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Pueblo,CO"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Pueblo","adminArea5Type":"City","adminArea4":"Pueblo
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040865","unknownInput":"","type":"s","latLng":{"lat":38.265425,"lng":-104.610415},"displayLatLng":{"lat":38.265425,"lng":-104.610415},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAP_QUEST_API_KEY>&type=map&size=225,160&locations=38.265425,-104.610415|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-117231878"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Pueblo
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932014","unknownInput":"","type":"s","latLng":{"lat":38.265425,"lng":-104.610415},"displayLatLng":{"lat":38.265425,"lng":-104.610415},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<MAP_QUEST_API_KEY>&type=map&size=225,160&locations=38.265425,-104.610415|marker-sm-50318A-2&scalebar=true&zoom=9&rand=288684889"}]}]}'
+  recorded_at: Wed, 28 Sep 2022 11:52:46 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=<OPEN_WEATHER_API_KEY>&lat=38.265425&lon=-104.610415&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 28 Sep 2022 11:52:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '19822'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?lat=38.27&lon=-104.61&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":38.2654,"lon":-104.6104,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1664365967,"sunrise":1664369486,"sunset":1664412395,"temp":58.75,"feels_like":57.15,"pressure":1021,"humidity":60,"dew_point":44.92,"uvi":0,"clouds":75,"visibility":10000,"wind_speed":0,"wind_deg":0,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},"minutely":[{"dt":1664365980,"precipitation":0},{"dt":1664366040,"precipitation":0},{"dt":1664366100,"precipitation":0},{"dt":1664366160,"precipitation":0},{"dt":1664366220,"precipitation":0},{"dt":1664366280,"precipitation":0},{"dt":1664366340,"precipitation":0},{"dt":1664366400,"precipitation":0},{"dt":1664366460,"precipitation":0},{"dt":1664366520,"precipitation":0},{"dt":1664366580,"precipitation":0},{"dt":1664366640,"precipitation":0},{"dt":1664366700,"precipitation":0},{"dt":1664366760,"precipitation":0},{"dt":1664366820,"precipitation":0},{"dt":1664366880,"precipitation":0},{"dt":1664366940,"precipitation":0},{"dt":1664367000,"precipitation":0},{"dt":1664367060,"precipitation":0},{"dt":1664367120,"precipitation":0},{"dt":1664367180,"precipitation":0},{"dt":1664367240,"precipitation":0},{"dt":1664367300,"precipitation":0},{"dt":1664367360,"precipitation":0},{"dt":1664367420,"precipitation":0},{"dt":1664367480,"precipitation":0},{"dt":1664367540,"precipitation":0},{"dt":1664367600,"precipitation":0},{"dt":1664367660,"precipitation":0},{"dt":1664367720,"precipitation":0},{"dt":1664367780,"precipitation":0},{"dt":1664367840,"precipitation":0},{"dt":1664367900,"precipitation":0},{"dt":1664367960,"precipitation":0},{"dt":1664368020,"precipitation":0},{"dt":1664368080,"precipitation":0},{"dt":1664368140,"precipitation":0},{"dt":1664368200,"precipitation":0},{"dt":1664368260,"precipitation":0},{"dt":1664368320,"precipitation":0},{"dt":1664368380,"precipitation":0},{"dt":1664368440,"precipitation":0},{"dt":1664368500,"precipitation":0},{"dt":1664368560,"precipitation":0},{"dt":1664368620,"precipitation":0},{"dt":1664368680,"precipitation":0},{"dt":1664368740,"precipitation":0},{"dt":1664368800,"precipitation":0},{"dt":1664368860,"precipitation":0},{"dt":1664368920,"precipitation":0},{"dt":1664368980,"precipitation":0},{"dt":1664369040,"precipitation":0},{"dt":1664369100,"precipitation":0},{"dt":1664369160,"precipitation":0},{"dt":1664369220,"precipitation":0},{"dt":1664369280,"precipitation":0},{"dt":1664369340,"precipitation":0},{"dt":1664369400,"precipitation":0},{"dt":1664369460,"precipitation":0},{"dt":1664369520,"precipitation":0},{"dt":1664369580,"precipitation":0}],"hourly":[{"dt":1664362800,"temp":59.13,"feels_like":57.47,"pressure":1021,"humidity":58,"dew_point":44.38,"uvi":0,"clouds":73,"visibility":10000,"wind_speed":3.44,"wind_deg":241,"wind_gust":3.78,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664366400,"temp":58.75,"feels_like":57.15,"pressure":1021,"humidity":60,"dew_point":44.92,"uvi":0,"clouds":75,"visibility":10000,"wind_speed":2.24,"wind_deg":245,"wind_gust":2.66,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664370000,"temp":58.8,"feels_like":57.16,"pressure":1021,"humidity":59,"dew_point":44.53,"uvi":0,"clouds":63,"visibility":10000,"wind_speed":1.3,"wind_deg":247,"wind_gust":2.46,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1664373600,"temp":60.8,"feels_like":59.13,"pressure":1022,"humidity":54,"dew_point":44.08,"uvi":0.27,"clouds":49,"visibility":10000,"wind_speed":0.47,"wind_deg":200,"wind_gust":2.71,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1664377200,"temp":63.95,"feels_like":62.29,"pressure":1022,"humidity":48,"dew_point":43.9,"uvi":1.12,"clouds":34,"visibility":10000,"wind_speed":1.43,"wind_deg":118,"wind_gust":2.98,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1664380800,"temp":68.47,"feels_like":66.9,"pressure":1022,"humidity":40,"dew_point":43.23,"uvi":2.69,"clouds":19,"visibility":10000,"wind_speed":3.29,"wind_deg":121,"wind_gust":3.62,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1664384400,"temp":74.25,"feels_like":72.82,"pressure":1021,"humidity":31,"dew_point":41.25,"uvi":4.54,"clouds":4,"visibility":10000,"wind_speed":3.49,"wind_deg":127,"wind_gust":3.44,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664388000,"temp":77.56,"feels_like":76.28,"pressure":1020,"humidity":27,"dew_point":40.41,"uvi":6.06,"clouds":4,"visibility":10000,"wind_speed":3.44,"wind_deg":134,"wind_gust":3.8,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664391600,"temp":80.33,"feels_like":78.94,"pressure":1019,"humidity":23,"dew_point":39.34,"uvi":6.58,"clouds":4,"visibility":10000,"wind_speed":4.05,"wind_deg":131,"wind_gust":4.14,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664395200,"temp":82.67,"feels_like":80.33,"pressure":1017,"humidity":20,"dew_point":37.83,"uvi":6,"clouds":2,"visibility":10000,"wind_speed":3.98,"wind_deg":131,"wind_gust":5.5,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664398800,"temp":84.07,"feels_like":81.28,"pressure":1016,"humidity":19,"dew_point":36.84,"uvi":4.5,"clouds":2,"visibility":10000,"wind_speed":3.27,"wind_deg":179,"wind_gust":6.02,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1664402400,"temp":84.61,"feels_like":81.66,"pressure":1015,"humidity":18,"dew_point":36.68,"uvi":2.24,"clouds":24,"visibility":10000,"wind_speed":8.9,"wind_deg":163,"wind_gust":8.63,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1664406000,"temp":82.62,"feels_like":80.33,"pressure":1015,"humidity":21,"dew_point":38.73,"uvi":0.95,"clouds":26,"visibility":10000,"wind_speed":18.88,"wind_deg":173,"wind_gust":15.23,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1664409600,"temp":78.15,"feels_like":76.89,"pressure":1016,"humidity":26,"dew_point":40.26,"uvi":0.22,"clouds":27,"visibility":10000,"wind_speed":18.14,"wind_deg":179,"wind_gust":21.81,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1664413200,"temp":73.38,"feels_like":71.87,"pressure":1017,"humidity":31,"dew_point":40.39,"uvi":0,"clouds":7,"visibility":10000,"wind_speed":9.57,"wind_deg":190,"wind_gust":18.14,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1664416800,"temp":72.81,"feels_like":71.33,"pressure":1017,"humidity":33,"dew_point":41.59,"uvi":0,"clouds":31,"visibility":10000,"wind_speed":10.29,"wind_deg":179,"wind_gust":19.3,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664420400,"temp":71.42,"feels_like":69.85,"pressure":1017,"humidity":34,"dew_point":41.36,"uvi":0,"clouds":47,"visibility":10000,"wind_speed":7.49,"wind_deg":203,"wind_gust":15.52,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664424000,"temp":69.37,"feels_like":67.75,"pressure":1018,"humidity":37,"dew_point":41.18,"uvi":0,"clouds":50,"visibility":10000,"wind_speed":1.43,"wind_deg":247,"wind_gust":6.62,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664427600,"temp":66.85,"feels_like":65.12,"pressure":1019,"humidity":40,"dew_point":41.27,"uvi":0,"clouds":49,"visibility":10000,"wind_speed":0.85,"wind_deg":59,"wind_gust":6.22,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664431200,"temp":65.53,"feels_like":63.77,"pressure":1019,"humidity":42,"dew_point":41.5,"uvi":0,"clouds":56,"visibility":10000,"wind_speed":4.88,"wind_deg":308,"wind_gust":6.35,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664434800,"temp":64.92,"feels_like":63.14,"pressure":1018,"humidity":43,"dew_point":41.59,"uvi":0,"clouds":99,"visibility":10000,"wind_speed":6.08,"wind_deg":324,"wind_gust":7.87,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1664438400,"temp":63.68,"feels_like":61.92,"pressure":1019,"humidity":46,"dew_point":41.97,"uvi":0,"clouds":99,"visibility":10000,"wind_speed":5.03,"wind_deg":334,"wind_gust":6.04,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1664442000,"temp":62.6,"feels_like":60.82,"pressure":1018,"humidity":48,"dew_point":42.22,"uvi":0,"clouds":79,"visibility":10000,"wind_speed":4.41,"wind_deg":327,"wind_gust":5.48,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664445600,"temp":62.01,"feels_like":60.21,"pressure":1018,"humidity":49,"dew_point":42.17,"uvi":0,"clouds":76,"visibility":10000,"wind_speed":3.71,"wind_deg":299,"wind_gust":4.81,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664449200,"temp":62.24,"feels_like":60.42,"pressure":1018,"humidity":48,"dew_point":41.81,"uvi":0,"clouds":78,"visibility":10000,"wind_speed":3.83,"wind_deg":283,"wind_gust":4.65,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664452800,"temp":62.55,"feels_like":60.71,"pressure":1018,"humidity":47,"dew_point":41.31,"uvi":0,"clouds":82,"visibility":10000,"wind_speed":4.36,"wind_deg":297,"wind_gust":5.12,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1664456400,"temp":62.31,"feels_like":60.46,"pressure":1018,"humidity":47,"dew_point":41.09,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":3.96,"wind_deg":289,"wind_gust":4.34,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664460000,"temp":66.65,"feels_like":64.89,"pressure":1018,"humidity":40,"dew_point":41.38,"uvi":0.24,"clouds":100,"visibility":10000,"wind_speed":3.29,"wind_deg":277,"wind_gust":6.64,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664463600,"temp":70.75,"feels_like":69.17,"pressure":1018,"humidity":35,"dew_point":40.95,"uvi":1.01,"clouds":100,"visibility":10000,"wind_speed":5.44,"wind_deg":271,"wind_gust":9.48,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664467200,"temp":75.88,"feels_like":74.53,"pressure":1017,"humidity":29,"dew_point":40.66,"uvi":2.54,"clouds":87,"visibility":10000,"wind_speed":6.4,"wind_deg":273,"wind_gust":10.02,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664470800,"temp":79.79,"feels_like":79.79,"pressure":1016,"humidity":24,"dew_point":39.22,"uvi":4.32,"clouds":86,"visibility":10000,"wind_speed":5.86,"wind_deg":262,"wind_gust":9.64,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664474400,"temp":82.76,"feels_like":80.38,"pressure":1014,"humidity":20,"dew_point":37.08,"uvi":5.77,"clouds":88,"visibility":10000,"wind_speed":4.94,"wind_deg":265,"wind_gust":7.29,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664478000,"temp":84.13,"feels_like":81.3,"pressure":1013,"humidity":18,"dew_point":35.62,"uvi":6.36,"clouds":76,"visibility":10000,"wind_speed":2.98,"wind_deg":266,"wind_gust":7.65,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1664481600,"temp":85.08,"feels_like":81.99,"pressure":1012,"humidity":17,"dew_point":34.92,"uvi":5.8,"clouds":88,"visibility":10000,"wind_speed":2.01,"wind_deg":186,"wind_gust":7.29,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664485200,"temp":85.44,"feels_like":82.24,"pressure":1010,"humidity":16,"dew_point":34.03,"uvi":4.34,"clouds":92,"visibility":10000,"wind_speed":3.71,"wind_deg":145,"wind_gust":6.71,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664488800,"temp":85.69,"feels_like":82.42,"pressure":1009,"humidity":15,"dew_point":32.92,"uvi":2.48,"clouds":94,"visibility":10000,"wind_speed":4.25,"wind_deg":119,"wind_gust":6.98,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1664492400,"temp":85.75,"feels_like":82.44,"pressure":1009,"humidity":14,"dew_point":31.46,"uvi":1.04,"clouds":78,"visibility":10000,"wind_speed":5.26,"wind_deg":117,"wind_gust":7.43,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1664496000,"temp":83.37,"feels_like":80.69,"pressure":1009,"humidity":16,"dew_point":31.93,"uvi":0.24,"clouds":73,"visibility":10000,"wind_speed":5.41,"wind_deg":150,"wind_gust":7.47,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0},{"dt":1664499600,"temp":76.5,"feels_like":74.79,"pressure":1009,"humidity":20,"dew_point":31.75,"uvi":0,"clouds":96,"visibility":10000,"wind_speed":6.44,"wind_deg":190,"wind_gust":9.98,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.08},{"dt":1664503200,"temp":72.1,"feels_like":70.29,"pressure":1011,"humidity":27,"dew_point":35.01,"uvi":0,"clouds":51,"visibility":10000,"wind_speed":7.18,"wind_deg":278,"wind_gust":14.85,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0.04},{"dt":1664506800,"temp":69.76,"feels_like":67.95,"pressure":1012,"humidity":32,"dew_point":37.98,"uvi":0,"clouds":36,"visibility":10000,"wind_speed":10.94,"wind_deg":340,"wind_gust":17.09,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664510400,"temp":68.7,"feels_like":66.92,"pressure":1012,"humidity":35,"dew_point":39.49,"uvi":0,"clouds":28,"visibility":10000,"wind_speed":8.66,"wind_deg":337,"wind_gust":13.47,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1664514000,"temp":66.94,"feels_like":65.12,"pressure":1012,"humidity":38,"dew_point":39.96,"uvi":0,"clouds":24,"visibility":10000,"wind_speed":5.73,"wind_deg":315,"wind_gust":6.71,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"pop":0},{"dt":1664517600,"temp":66.29,"feels_like":64.4,"pressure":1012,"humidity":38,"dew_point":39.81,"uvi":0,"clouds":21,"visibility":10000,"wind_speed":5.48,"wind_deg":291,"wind_gust":5.97,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"pop":0},{"dt":1664521200,"temp":65.8,"feels_like":63.88,"pressure":1012,"humidity":38,"dew_point":39.04,"uvi":0,"clouds":3,"visibility":10000,"wind_speed":5.59,"wind_deg":277,"wind_gust":6.6,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1664524800,"temp":65.39,"feels_like":63.37,"pressure":1012,"humidity":37,"dew_point":38.07,"uvi":0,"clouds":2,"visibility":10000,"wind_speed":5.77,"wind_deg":270,"wind_gust":6.67,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1664528400,"temp":64.85,"feels_like":62.78,"pressure":1012,"humidity":37,"dew_point":37.31,"uvi":0,"clouds":2,"visibility":10000,"wind_speed":6.4,"wind_deg":275,"wind_gust":7.45,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1664532000,"temp":64.38,"feels_like":62.31,"pressure":1012,"humidity":38,"dew_point":37.31,"uvi":0,"clouds":2,"visibility":10000,"wind_speed":6.58,"wind_deg":275,"wind_gust":8.23,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0}],"daily":[{"dt":1664388000,"sunrise":1664369486,"sunset":1664412395,"moonrise":1664379840,"moonset":1664418180,"moon_phase":0.1,"temp":{"day":77.56,"min":58.75,"max":84.61,"night":66.85,"eve":78.15,"morn":58.75},"feels_like":{"day":76.28,"night":65.12,"eve":76.89,"morn":57.15},"pressure":1020,"humidity":27,"dew_point":40.41,"wind_speed":18.88,"wind_deg":173,"wind_gust":21.81,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":4,"pop":0.31,"uvi":6.58},{"dt":1664474400,"sunrise":1664455939,"sunset":1664498700,"moonrise":1664470500,"moonset":1664506680,"moon_phase":0.13,"temp":{"day":82.76,"min":62.01,"max":85.75,"night":66.94,"eve":83.37,"morn":62.55},"feels_like":{"day":80.38,"night":65.12,"eve":80.69,"morn":60.71},"pressure":1014,"humidity":20,"dew_point":37.08,"wind_speed":10.94,"wind_deg":340,"wind_gust":17.09,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":88,"pop":0.08,"uvi":6.36},{"dt":1664560800,"sunrise":1664542392,"sunset":1664585006,"moonrise":1664561220,"moonset":1664595600,"moon_phase":0.17,"temp":{"day":82.89,"min":61.99,"max":85.57,"night":67.05,"eve":82.09,"morn":62.71},"feels_like":{"day":80.37,"night":65.48,"eve":79.75,"morn":60.6},"pressure":1008,"humidity":17,"dew_point":34.11,"wind_speed":21.3,"wind_deg":11,"wind_gust":27.67,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":5,"pop":0.04,"uvi":6.47},{"dt":1664647200,"sunrise":1664628846,"sunset":1664671312,"moonrise":1664651880,"moonset":1664685060,"moon_phase":0.2,"temp":{"day":68.61,"min":56.86,"max":74.35,"night":58.86,"eve":68.83,"morn":56.86},"feels_like":{"day":67.28,"night":57.69,"eve":67.57,"morn":55.53},"pressure":1012,"humidity":45,"dew_point":45.68,"wind_speed":8.86,"wind_deg":81,"wind_gust":13.98,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":64,"pop":0.88,"rain":1.38,"uvi":6.29},{"dt":1664733600,"sunrise":1664715300,"sunset":1664757619,"moonrise":1664742180,"moonset":1664775120,"moon_phase":0.25,"temp":{"day":69.3,"min":53.69,"max":77.31,"night":63.73,"eve":70.23,"morn":53.69},"feels_like":{"day":68,"night":62.06,"eve":68.7,"morn":52.7},"pressure":1014,"humidity":44,"dew_point":46.04,"wind_speed":8.66,"wind_deg":105,"wind_gust":7.96,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":2,"pop":1,"rain":1.32,"uvi":7},{"dt":1664820000,"sunrise":1664801754,"sunset":1664843926,"moonrise":1664832060,"moonset":0,"moon_phase":0.28,"temp":{"day":67.42,"min":56.75,"max":70.86,"night":58.46,"eve":66.83,"morn":56.75},"feels_like":{"day":66.02,"night":57.25,"eve":65.28,"morn":55.27},"pressure":1018,"humidity":46,"dew_point":45.28,"wind_speed":14.72,"wind_deg":153,"wind_gust":17.69,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.75,"rain":1.36,"uvi":7},{"dt":1664906400,"sunrise":1664888208,"sunset":1664930233,"moonrise":1664921280,"moonset":1664865660,"moon_phase":0.31,"temp":{"day":61.97,"min":56.05,"max":67.55,"night":60.57,"eve":64.9,"morn":56.77},"feels_like":{"day":60.46,"night":59.14,"eve":63.21,"morn":55.58},"pressure":1022,"humidity":55,"dew_point":45.01,"wind_speed":10.13,"wind_deg":127,"wind_gust":11.72,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.78,"rain":2.63,"uvi":7},{"dt":1664992800,"sunrise":1664974662,"sunset":1665016541,"moonrise":1665010020,"moonset":1664956500,"moon_phase":0.35,"temp":{"day":67.93,"min":53.24,"max":72.82,"night":63.95,"eve":72.21,"morn":53.24},"feels_like":{"day":66.34,"night":61.97,"eve":70.54,"morn":51.84},"pressure":1015,"humidity":41,"dew_point":43.16,"wind_speed":7.52,"wind_deg":93,"wind_gust":9.57,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":1,"pop":0.45,"rain":0.21,"uvi":7}]}'
+  recorded_at: Wed, 28 Sep 2022 11:52:47 GMT
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&key=<MAP_QUEST_API_KEY>&to=Pueblo,CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 28 Sep 2022 11:52:47 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - JSESSIONID=9EDBC3B3F829671B2BC55213BAE77A28; Path=/directions; HttpOnly
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Last-Modified:
+      - Wed, 28 Sep 2022 11:52:47 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      X-Vz-Migration-Api:
+      - 'false'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Status:
+      - success
+      Transactionweight:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJoYXNUb2xsUm9hZCI6ZmFsc2UsImhhc0JyaWRnZSI6dHJ1ZSwiYm91bmRpbmdCb3giOnsibHIiOnsibG5nIjotMTA0LjYwNTA4LCJsYXQiOjM4LjI2NTQyN30sInVsIjp7ImxuZyI6LTEwNC45ODc2MDIsImxhdCI6MzkuNzM4NDUzfX0sImRpc3RhbmNlIjoxMTEuMzg3LCJoYXNUaW1lZFJlc3RyaWN0aW9uIjpmYWxzZSwiaGFzVHVubmVsIjpmYWxzZSwiaGFzSGlnaHdheSI6dHJ1ZSwiY29tcHV0ZWRXYXlwb2ludHMiOltdLCJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6LTQwMCwibWVzc2FnZSI6IiJ9LCJmb3JtYXR0ZWRUaW1lIjoiMDE6NDU6MjMiLCJzZXNzaW9uSWQiOiI2MzM0MzU4Zi0wMjcyLTVmMjEtMDJiNC0zY2JlLTA2MDBlMjc3ODQ2MSIsImhhc0FjY2Vzc1Jlc3RyaWN0aW9uIjpmYWxzZSwicmVhbFRpbWUiOjYzMTAsImhhc1NlYXNvbmFsQ2xvc3VyZSI6ZmFsc2UsImhhc0NvdW50cnlDcm9zcyI6ZmFsc2UsImZ1ZWxVc2VkIjo1LjQyLCJsZWdzIjpbeyJoYXNUb2xsUm9hZCI6ZmFsc2UsImhhc0JyaWRnZSI6dHJ1ZSwiZGVzdE5hcnJhdGl2ZSI6IlByb2NlZWQgdG8gUFVFQkxPLCBDTy4iLCJkaXN0YW5jZSI6MTExLjM4NywiaGFzVGltZWRSZXN0cmljdGlvbiI6ZmFsc2UsImhhc1R1bm5lbCI6ZmFsc2UsImhhc0hpZ2h3YXkiOnRydWUsImluZGV4IjowLCJmb3JtYXR0ZWRUaW1lIjoiMDE6NDU6MjMiLCJvcmlnSW5kZXgiOjIsImhhc0FjY2Vzc1Jlc3RyaWN0aW9uIjpmYWxzZSwiaGFzU2Vhc29uYWxDbG9zdXJlIjpmYWxzZSwiaGFzQ291bnRyeUNyb3NzIjpmYWxzZSwicm9hZEdyYWRlU3RyYXRlZ3kiOltbXV0sImRlc3RJbmRleCI6NSwidGltZSI6NjMyMywiaGFzVW5wYXZlZCI6ZmFsc2UsIm9yaWdOYXJyYXRpdmUiOiJHbyBzb3V0aCBvbiBOIEJyb2Fkd2F5LiIsIm1hbmV1dmVycyI6W3siZGlzdGFuY2UiOjAuMTA5LCJzdHJlZXRzIjpbIk4gU2hlcm1hbiBTdCJdLCJuYXJyYXRpdmUiOiJTdGFydCBvdXQgZ29pbmcgc291dGggb24gTiBTaGVybWFuIFN0IHRvd2FyZCBFIDEzdGggQXZlLiIsInR1cm5UeXBlIjowLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODQ4NTYsImxhdCI6MzkuNzM4NDUzfSwiaW5kZXgiOjAsImZvcm1hdHRlZFRpbWUiOiIwMDowMDoyMyIsImRpcmVjdGlvbk5hbWUiOiJTb3V0aCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT08TUFQX1FVRVNUX0FQSV9LRVk+JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzM4NDUyOTExMzc2OTUsLTEwNC45ODQ4NTU2NTE4NTU0N3xtYXJrZXItMXx8MzkuNzM2ODc3NDQxNDA2MjUsLTEwNC45ODQ4NDAzOTMwNjY0fG1hcmtlci0yfHwmY2VudGVyPTM5LjczNzY2NTE3NjM5MTYsLTEwNC45ODQ4NDgwMjI0NjA5NCZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xMyZyYW5kPTIwMjc0Mjk1Mzkmc2Vzc2lvbj02MzM0MzU4Zi0wMjcyLTVmMjEtMDJiNC0zY2JlLTA2MDBlMjc3ODQ2MSIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6MjMsImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9pY29uLWRpcnMtc3RhcnRfc20uZ2lmIiwiZGlyZWN0aW9uIjo0fSx7ImRpc3RhbmNlIjowLjEzNSwic3RyZWV0cyI6WyJFIDEzdGggQXZlIl0sIm5hcnJhdGl2ZSI6IlR1cm4gcmlnaHQgb250byBFIDEzdGggQXZlLiIsInR1cm5UeXBlIjoyLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODQ4NCwibGF0IjozOS43MzY4Nzd9LCJpbmRleCI6MSwiZm9ybWF0dGVkVGltZSI6IjAwOjAwOjIyIiwiZGlyZWN0aW9uTmFtZSI6Ildlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9PE1BUF9RVUVTVF9BUElfS0VZPiZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM5LjczNjg3NzQ0MTQwNjI1LC0xMDQuOTg0ODQwMzkzMDY2NHxtYXJrZXItMnx8MzkuNzM2ODY5ODEyMDExNzIsLTEwNC45ODczNzMzNTIwNTA3OHxtYXJrZXItM3x8JmNlbnRlcj0zOS43MzY4NzM2MjY3MDg5ODQsLTEwNC45ODYxMDY4NzI1NTg2JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTEzJnJhbmQ9MjAyNzQyOTUzOSZzZXNzaW9uPTYzMzQzNThmLTAyNzItNWYyMS0wMmI0LTNjYmUtMDYwMGUyNzc4NDYxIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjowLCJ0aW1lIjoyMiwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX3JpZ2h0X3NtLmdpZiIsImRpcmVjdGlvbiI6N30seyJkaXN0YW5jZSI6Mi40ODYsInN0cmVldHMiOlsiTiBCcm9hZHdheSJdLCJuYXJyYXRpdmUiOiJUdXJuIGxlZnQgb250byBOIEJyb2Fkd2F5LiIsInR1cm5UeXBlIjo2LCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODczNzMsImxhdCI6MzkuNzM2ODd9LCJpbmRleCI6MiwiZm9ybWF0dGVkVGltZSI6IjAwOjA1OjU5IiwiZGlyZWN0aW9uTmFtZSI6IlNvdXRoIiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PTxNQVBfUVVFU1RfQVBJX0tFWT4mc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43MzY4Njk4MTIwMTE3MiwtMTA0Ljk4NzM3MzM1MjA1MDc4fG1hcmtlci0zfHwzOS43MDA4NDc2MjU3MzI0MiwtMTA0Ljk4NzYwMjIzMzg4NjcyfG1hcmtlci00fHwmY2VudGVyPTM5LjcxODg1ODcxODg3MjA3LC0xMDQuOTg3NDg3NzkyOTY4NzUmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209OCZyYW5kPTIwMjc0Mjk1Mzkmc2Vzc2lvbj02MzM0MzU4Zi0wMjcyLTVmMjEtMDJiNC0zY2JlLTA2MDBlMjc3ODQ2MSIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MTAyNCwidGltZSI6MzU5LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbGVmdF9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjAuMDE0LCJzdHJlZXRzIjpbXSwibmFycmF0aXZlIjoiVHVybiBsZWZ0IHRvIHRha2UgdGhlIEktMjUgUyByYW1wIHRvd2FyZCBDb2xvIFNwZ3MuIiwidHVyblR5cGUiOjEzLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODc2MDIsImxhdCI6MzkuNzAwODQ4fSwiaW5kZXgiOjMsImZvcm1hdHRlZFRpbWUiOiIwMDowMDowNyIsImRpcmVjdGlvbk5hbWUiOiJTb3V0aGVhc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9PE1BUF9RVUVTVF9BUElfS0VZPiZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM5LjcwMDg0NzYyNTczMjQyLC0xMDQuOTg3NjAyMjMzODg2NzJ8bWFya2VyLTR8fDM5LjcwMDczMzE4NDgxNDQ1LC0xMDQuOTg3Mzk2MjQwMjM0Mzh8bWFya2VyLTV8fCZjZW50ZXI9MzkuNzAwNzkwNDA1MjczNDQsLTEwNC45ODc0OTkyMzcwNjA1NSZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT0xNSZyYW5kPTIwMjc0Mjk1Mzkmc2Vzc2lvbj02MzM0MzU4Zi0wMjcyLTVmMjEtMDJiNC0zY2JlLTA2MDBlMjc3ODQ2MSIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6NywiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX3JhbXBfc20uZ2lmIiwiZGlyZWN0aW9uIjo1fSx7ImRpc3RhbmNlIjoxMDguMDUzLCJzdHJlZXRzIjpbIkktMjUgUyJdLCJuYXJyYXRpdmUiOiJNZXJnZSBvbnRvIEktMjUgUy4iLCJ0dXJuVHlwZSI6MTAsInN0YXJ0UG9pbnQiOnsibG5nIjotMTA0Ljk4NzM5NiwibGF0IjozOS43MDA3MzN9LCJpbmRleCI6NCwiZm9ybWF0dGVkVGltZSI6IjAxOjM3OjE0IiwiZGlyZWN0aW9uTmFtZSI6IlNvdXRoIiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W3siZXh0cmFUZXh0IjoiIiwidGV4dCI6IjI1IiwidHlwZSI6MSwidXJsIjoiaHR0cDovL2ljb25zLm1xY2RuLmNvbS9pY29ucy9yczEucG5nP249MjUmZD1TT1VUSCIsImRpcmVjdGlvbiI6NH1dLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT08TUFQX1FVRVNUX0FQSV9LRVk+JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzAwNzMzMTg0ODE0NDUsLTEwNC45ODczOTYyNDAyMzQzOHxtYXJrZXItNXx8MzguMjcxMTAyOTA1MjczNDQsLTEwNC42MDUwNzk2NTA4Nzg5fG1hcmtlci02fHwmY2VudGVyPTM4Ljk4NTkxODA0NTA0Mzk0NSwtMTA0Ljc5NjIzNzk0NTU1NjY0JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTMmcmFuZD0yMDI3NDI5NTM5JnNlc3Npb249NjMzNDM1OGYtMDI3Mi01ZjIxLTAyYjQtM2NiZS0wNjAwZTI3Nzg0NjEiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjExNTIsInRpbWUiOjU4MzQsImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9yc19tZXJnZV9yaWdodF9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjAuMjIxLCJzdHJlZXRzIjpbXSwibmFycmF0aXZlIjoiVGFrZSB0aGUgMXN0IFN0cmVldCBleGl0LCBFWElUIDk4Qi4iLCJ0dXJuVHlwZSI6MTQsInN0YXJ0UG9pbnQiOnsibG5nIjotMTA0LjYwNTA4LCJsYXQiOjM4LjI3MTEwM30sImluZGV4Ijo1LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MTkiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiOThCIiwidHlwZSI6MTAwMSwidXJsIjoiaHR0cDovL2ljb25zLm1xY2RuLmNvbS9pY29ucy9yczEwMDEucG5nP249OThCJmQ9UklHSFQiLCJkaXJlY3Rpb24iOjB9XSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9PE1BUF9RVUVTVF9BUElfS0VZPiZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM4LjI3MTEwMjkwNTI3MzQ0LC0xMDQuNjA1MDc5NjUwODc4OXxtYXJrZXItNnx8MzguMjY3OTcxMDM4ODE4MzYsLTEwNC42MDU2MTM3MDg0OTYxfG1hcmtlci03fHwmY2VudGVyPTM4LjI2OTUzNjk3MjA0NTksLTEwNC42MDUzNDY2Nzk2ODc1JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTExJnJhbmQ9MjAyNzQyOTUzOSZzZXNzaW9uPTYzMzQzNThmLTAyNzItNWYyMS0wMmI0LTNjYmUtMDYwMGUyNzc4NDYxIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjoxMDI0LCJ0aW1lIjoxOSwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX2dyX2V4aXRyaWdodF9zbS5naWYiLCJkaXJlY3Rpb24iOjR9LHsiZGlzdGFuY2UiOjAuMDc5LCJzdHJlZXRzIjpbIkUgMXN0IFN0Il0sIm5hcnJhdGl2ZSI6IlR1cm4gcmlnaHQgb250byBFIDFzdCBTdC4iLCJ0dXJuVHlwZSI6Miwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjA1NjE0LCJsYXQiOjM4LjI2Nzk3MX0sImluZGV4Ijo2LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MTciLCJkaXJlY3Rpb25OYW1lIjoiV2VzdCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT08TUFQX1FVRVNUX0FQSV9LRVk+JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzguMjY3OTcxMDM4ODE4MzYsLTEwNC42MDU2MTM3MDg0OTYxfG1hcmtlci03fHwzOC4yNjc5NDQzMzU5Mzc1LC0xMDQuNjA3MDU1NjY0MDYyNXxtYXJrZXItOHx8JmNlbnRlcj0zOC4yNjc5NTc2ODczNzc5MywtMTA0LjYwNjMzNDY4NjI3OTMmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTUmcmFuZD0yMDI3NDI5NTM5JnNlc3Npb249NjMzNDM1OGYtMDI3Mi01ZjIxLTAyYjQtM2NiZS0wNjAwZTI3Nzg0NjEiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjE3LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfcmlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjowLjA3OSwic3RyZWV0cyI6WyJXIENpdHkgQ2VudGVyIERyIl0sIm5hcnJhdGl2ZSI6IkUgMXN0IFN0IGJlY29tZXMgVyBDaXR5IENlbnRlciBEci4iLCJ0dXJuVHlwZSI6MCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjA3MDU2LCJsYXQiOjM4LjI2Nzk0NH0sImluZGV4Ijo3LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MTciLCJkaXJlY3Rpb25OYW1lIjoiV2VzdCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT08TUFQX1FVRVNUX0FQSV9LRVk+JnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzguMjY3OTQ0MzM1OTM3NSwtMTA0LjYwNzA1NTY2NDA2MjV8bWFya2VyLTh8fDM4LjI2NzkxMzgxODM1OTM3NSwtMTA0LjYwODUwNTI0OTAyMzQ0fG1hcmtlci05fHwmY2VudGVyPTM4LjI2NzkyOTA3NzE0ODQ0LC0xMDQuNjA3NzgwNDU2NTQyOTcmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTUmcmFuZD0yMDI3NDI5NTM5JnNlc3Npb249NjMzNDM1OGYtMDI3Mi01ZjIxLTAyYjQtM2NiZS0wNjAwZTI3Nzg0NjEiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjE3LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfc3RyYWlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjowLjIxMSwic3RyZWV0cyI6WyJDZW50cmFsIE1haW4gU3QiXSwibmFycmF0aXZlIjoiVHVybiBsZWZ0IG9udG8gQ2VudHJhbCBNYWluIFN0LiIsInR1cm5UeXBlIjo2LCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC42MDg1MDUsImxhdCI6MzguMjY3OTE0fSwiaW5kZXgiOjgsImZvcm1hdHRlZFRpbWUiOiIwMDowMDoyNSIsImRpcmVjdGlvbk5hbWUiOiJTb3V0aHdlc3QiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9PE1BUF9RVUVTVF9BUElfS0VZPiZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM4LjI2NzkxMzgxODM1OTM3NSwtMTA0LjYwODUwNTI0OTAyMzQ0fG1hcmtlci05fHwzOC4yNjU0MjY2MzU3NDIxOSwtMTA0LjYxMDQxMjU5NzY1NjI1fG1hcmtlci0xMHx8JmNlbnRlcj0zOC4yNjY2NzAyMjcwNTA3OCwtMTA0LjYwOTQ1ODkyMzMzOTg0JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTEyJnJhbmQ9MjAyNzQyOTUzOSZzZXNzaW9uPTYzMzQzNThmLTAyNzItNWYyMS0wMmI0LTNjYmUtMDYwMGUyNzc4NDYxIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjowLCJ0aW1lIjoyNSwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX2xlZnRfc20uZ2lmIiwiZGlyZWN0aW9uIjo2fSx7ImRpc3RhbmNlIjowLCJzdHJlZXRzIjpbXSwibmFycmF0aXZlIjoiV2VsY29tZSB0byBQVUVCTE8sIENPLiIsInR1cm5UeXBlIjotMSwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjEwNDEzLCJsYXQiOjM4LjI2NTQyN30sImluZGV4Ijo5LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MDAiLCJkaXJlY3Rpb25OYW1lIjoiIiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MCwidGltZSI6MCwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL2ljb24tZGlycy1lbmRfc20uZ2lmIiwiZGlyZWN0aW9uIjowfV0sImhhc0ZlcnJ5IjpmYWxzZX1dLCJvcHRpb25zIjp7ImFydGVyeVdlaWdodHMiOltdLCJjeWNsaW5nUm9hZEZhY3RvciI6MSwidGltZVR5cGUiOjAsInVzZVRyYWZmaWMiOmZhbHNlLCJyZXR1cm5MaW5rRGlyZWN0aW9ucyI6ZmFsc2UsImNvdW50cnlCb3VuZGFyeURpc3BsYXkiOnRydWUsImVuaGFuY2VkTmFycmF0aXZlIjpmYWxzZSwibG9jYWxlIjoiZW5fVVMiLCJ0cnlBdm9pZExpbmtJZHMiOltdLCJkcml2aW5nU3R5bGUiOjIsImRvUmV2ZXJzZUdlb2NvZGUiOnRydWUsImdlbmVyYWxpemUiOi0xLCJtdXN0QXZvaWRMaW5rSWRzIjpbXSwic2lkZU9mU3RyZWV0RGlzcGxheSI6dHJ1ZSwicm91dGVUeXBlIjoiRkFTVEVTVCIsImF2b2lkVGltZWRDb25kaXRpb25zIjpmYWxzZSwicm91dGVOdW1iZXIiOjAsInNoYXBlRm9ybWF0IjoicmF3IiwibWF4V2Fsa2luZ0Rpc3RhbmNlIjotMSwiZGVzdGluYXRpb25NYW5ldXZlckRpc3BsYXkiOnRydWUsInRyYW5zZmVyUGVuYWx0eSI6LTEsIm5hcnJhdGl2ZVR5cGUiOiJ0ZXh0Iiwid2Fsa2luZ1NwZWVkIjotMSwidXJiYW5Bdm9pZEZhY3RvciI6LTEsInN0YXRlQm91bmRhcnlEaXNwbGF5Ijp0cnVlLCJ1bml0IjoiTSIsImhpZ2h3YXlFZmZpY2llbmN5IjoyMiwibWF4TGlua0lkIjowLCJtYW5ldXZlclBlbmFsdHkiOi0xLCJhdm9pZFRyaXBJZHMiOltdLCJmaWx0ZXJab25lRmFjdG9yIjotMSwibWFubWFwcyI6InRydWUifSwibG9jYXRpb25zIjpbeyJkcmFnUG9pbnQiOmZhbHNlLCJkaXNwbGF5TGF0TG5nIjp7ImxuZyI6LTEwNC45ODQ4NTYsImxhdCI6MzkuNzM4NDUzfSwiYWRtaW5BcmVhNCI6IkRlbnZlciBDb3VudHkiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwicG9zdGFsQ29kZSI6IiIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTMiOiJDTyIsInR5cGUiOiJzIiwic2lkZU9mU3RyZWV0IjoiTiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE1WEFYIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJsaW5rSWQiOjQyNDA5MzUxLCJzdHJlZXQiOiIiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJnZW9jb2RlUXVhbGl0eSI6IkNJVFkiLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwibGF0TG5nIjp7ImxuZyI6LTEwNC45ODQ4NTMsImxhdCI6MzkuNzM4NDUzfX0seyJkcmFnUG9pbnQiOmZhbHNlLCJkaXNwbGF5TGF0TG5nIjp7ImxuZyI6LTEwNC42MTA0MTMsImxhdCI6MzguMjY1NDI3fSwiYWRtaW5BcmVhNCI6IlB1ZWJsbyBDb3VudHkiLCJhZG1pbkFyZWE1IjoiUHVlYmxvIiwicG9zdGFsQ29kZSI6IiIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTMiOiJDTyIsInR5cGUiOiJzIiwic2lkZU9mU3RyZWV0IjoiTiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE1WEFYIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJsaW5rSWQiOjU3NjQ0MTIzLCJzdHJlZXQiOiIiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJnZW9jb2RlUXVhbGl0eSI6IkNJVFkiLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwibGF0TG5nIjp7ImxuZyI6LTEwNC42MTA0MTUsImxhdCI6MzguMjY1NDI1fX1dLCJ0aW1lIjo2MzIzLCJoYXNVbnBhdmVkIjpmYWxzZSwibG9jYXRpb25TZXF1ZW5jZSI6WzAsMV0sImhhc0ZlcnJ5IjpmYWxzZX0sImluZm8iOnsic3RhdHVzY29kZSI6MCwiY29weXJpZ2h0Ijp7ImltYWdlQWx0VGV4dCI6IsKpIDIwMjIgTWFwUXVlc3QsIEluYy4iLCJpbWFnZVVybCI6Imh0dHA6Ly9hcGkubXFjZG4uY29tL3Jlcy9tcWxvZ28uZ2lmIiwidGV4dCI6IsKpIDIwMjIgTWFwUXVlc3QsIEluYy4ifSwibWVzc2FnZXMiOltdfX0=
+  recorded_at: Wed, 28 Sep 2022 11:52:47 GMT
+recorded_with: VCR 6.1.0
