@@ -43,7 +43,24 @@ RSpec.describe 'User Login API' do
     expect(user[:data][:attributes]).to_not have_key(:password_confirmation)
   end
 
-  
+  it 'returns 401 error if login credentials are bad', :vcr do
+    User.create!(
+      email: "dude@turing.com",
+      password: "strongpw",
+      password_confirmation: "strongpw",
+      api_key: "superhexi"
+    )
+
+    request_data = {
+              "email": "dude@turing.com",
+              "password": "notstrongpw",
+            }
+
+    post "/api/v1/sessions", params: request_data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+  end
 end
 
 
