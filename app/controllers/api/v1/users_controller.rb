@@ -16,6 +16,8 @@ class Api::V1::UsersController < ApplicationController
     user = User.find_by(email: params[:email])
     if user.present? && user.authenticate(params[:password])
       render json: Api::V1::UserSerializer.display_user(user)
+    else
+      render json: { message: "credentials are incorrect, try again" }, status: 401
     end
   end
 end
