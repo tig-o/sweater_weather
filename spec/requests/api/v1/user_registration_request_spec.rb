@@ -106,6 +106,19 @@ RSpec.describe 'User Registration API' do
     expect(response).to_not be_successful
     expect(response.status).to eq(400)
   end
+
+  it 'returns 400 error if missing everything', :vcr do
+    data = {
+            "email": "",
+            "password": "",
+            "password_confirmation": ""
+           }
+
+    post "/api/v1/users", params: data, as: :json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+  end
 end
 
 
