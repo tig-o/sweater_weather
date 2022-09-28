@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       post '/sessions', to: 'users#user_login'
 
       post '/road_trip', to: 'road_trip#index'
+
+      get '/backgrounds', to: 'image#index'
     end
   end
 end
