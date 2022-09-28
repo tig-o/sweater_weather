@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Retrieve Weather API' do
-  it 'sends weather based on city' do
+  it 'sends weather based on city', :vcr do
     get '/api/v1/forecast?location=miami,fl'
 
     expect(response.status).to eq(200)
@@ -26,7 +26,6 @@ RSpec.describe 'Retrieve Weather API' do
     expect(current_forecast[:temperature]).to be_a(Float)
     expect(current_forecast[:feels_like]).to be_a(Float)
     expect(current_forecast[:humidity]).to be_an(Integer)
-    expect(current_forecast[:uvi]).to be_an(Float)
     expect(current_forecast[:visibility]).to be_an(Integer)
     expect(current_forecast[:conditions]).to be_a(String)
     expect(current_forecast[:icon]).to be_a(String)
